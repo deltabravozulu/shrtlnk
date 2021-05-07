@@ -122,6 +122,21 @@ add('http://instagr.am/$1',
 add('https://redd.it/$1',
     /^https?:\/\/(?:www\.)?reddit\.com\/r\/\w+\/comments\/(\w+)\/.*$/);
 
+
+// Craigslist
+// https://*.craigslist.org
+////https://losangeles.craigslist.org/
+add('https://la.craigslist.org/$1$2$3$6$7',
+    /^https?:\/\/losangeles\.craigslist\.org\/(search\/)?(\w+\/)(\w+\/?)(d\/(\w|-)+\/)?(\d+)?(\.html)?.*$/);
+//add('https://la.craigslist.org/$1/$2/$5.html',
+//    /^https?:\/\/losangeles\.craigslist\.org\/(\w+)\/(\w+)\/(d\/(\w|-)+\/)?(\d+).html#?.*$/);
+// lol these are the same somehow:
+//    https://losangeles.craigslist.org/d/for-sale/search/wst/sss/wst/sss/wst/sss
+//    https://losangeles.craigslist.org/d/for-sale/search/wst/sss
+//    https://losangeles.craigslist.org/search/wst/sss
+    
+
+
 // Flickr
 // https://flic.kr/p/[id]
 function flickr_function(num) {
